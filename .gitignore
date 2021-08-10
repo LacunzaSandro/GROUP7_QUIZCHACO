@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#confi setting
+QUIZCHACO/QUIZCHACO/settings/local.py
