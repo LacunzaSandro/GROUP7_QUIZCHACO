@@ -18,6 +18,35 @@
 	font-weight: bold;
 }
 
+.container-fluid.imagen {
+	text-align: center;
+}
+
+.container-fluid.texto{
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 'Gloria Hallelujah';
+	font-weight: bold;
+	font-size: 160%;
+	background-color: #fb5607;
+}
+
+.container-fluid.footer ul {
+	margin-top: 70px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.container-fluid.footer ul li {
+	display: inline;
+}
+
+.container-fluid.footer ul li a {
+	margin-right: 10px;
+}
+
+
+
 
 
 

@@ -2,5 +2,18 @@
 {% load static %}
 
 {% block contenido %}
-	
+	<div class="container-fluid imagen">
+		<a href="#"><img src="{% static 'img/logo_pagprincipal.png' %}" class="img-fluid" style="margin-left: 10px;"></a>
+	</div>
+	<div class="container-fluid texto">
+		<p style="padding-top: 50px;">¡Bienvenido al juego de preguntas en celebración del aniversario</p>
+		<p>de la provincialización de nuestra querida provincia!</p>
+		<p>Te invitamos a participar de esta experiencia</p>
+		<p style="margin-bottom: 50px;">y aprender junto a nosotros...</p>
+		<div class="d-grid gap-2 col-3 mx-auto" style="padding-bottom: 60px;">
+	 	 	<button class="btn btn-outline-light" type="button" style="font-weight: bold;">Iniciar sesión</button>
+	 	 	<p style="font-size: 50%; margin-top: 15px; margin-bottom: -3px;">¿Aún no estás registrado?</p>
+	  		<button class="btn btn-outline-light" type="button" style="font-weight: bold;">Regístrate</button>
+		</div>
+	</div>
 {% endblock contenido %}
