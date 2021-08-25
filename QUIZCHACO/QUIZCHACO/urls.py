@@ -20,6 +20,8 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Home, name='home'),
-    # authentication
+
     path('auth/', include('Apps.authentication.urls')),
+    path('ranking/', include('Apps.ranking.urls')),
+
 ]
