@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'Apps.ranking',
     'Apps.administration',
     'Apps.response',
+    'Apps.play',
 ]
 
 MIDDLEWARE = [
