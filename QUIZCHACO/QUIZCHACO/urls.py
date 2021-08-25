@@ -23,5 +23,6 @@ urlpatterns = [
 
     path('auth/', include('Apps.authentication.urls')),
     path('ranking/', include('Apps.ranking.urls')),
+    
 
 ]

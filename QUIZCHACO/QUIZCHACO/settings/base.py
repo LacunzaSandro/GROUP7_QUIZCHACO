@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'Apps.authentication',
     'Apps.genericos',
     'Apps.ranking',
+    'Apps.administration',    
 ]
 
 MIDDLEWARE = [
