@@ -22,7 +22,7 @@ urlpatterns = [
     path('', views.Home, name='home'),
 
     path('auth/', include('Apps.authentication.urls')),
-    #ranking
+    # ranking
     path('ranking/', include('Apps.ranking.urls')),
     # response
     path('response/', include('Apps.response.urls')),

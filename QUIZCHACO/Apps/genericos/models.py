@@ -29,7 +29,7 @@ class Pregunta(models.Model):
 
 
 class ElegirRespuesta(models.Model):
-    MAX_RESPONSE = 5  # número para definir el número de respuestas posibles
+    MAX_RESPONSE = 3  # número para definir el número de respuestas posibles
     pregunta = models.ForeignKey(
         Pregunta, related_name='opciones', on_delete=models.CASCADE)
     correcta = models.BooleanField(

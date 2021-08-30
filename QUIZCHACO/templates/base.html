@@ -4,7 +4,7 @@
 <html>
 
 <head>
-	<title>QuizzChaco</title>
+	<title>{{ titulo }}</title>
 
 	<link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
 
@@ -49,19 +49,19 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="#">Regístrate</a>
+							<a class="nav-link" href="{% url 'register' %}">Regístrate</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Iniciar sesión</a>
+							<a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Acerca de</a>
+							<a class="nav-link" href="">Acerca de</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Ranking</a>
+							<a class="nav-link" href="{% url 'ranking:ranking' %}">Ranking</a>
 						</li>
 						<li class="nav-item" id="primero">
-							<a class="nav-link active" href="#"
+							<a class="nav-link active" href="{% url 'play:playQuiz' %}"
 								style="font-size: 150%; padding: 16px 15px; border: 5px dotted #FFFFFF; margin-left: 5px;">Jugar</a>
 						</li>
 					</ul>
