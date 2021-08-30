@@ -108,7 +108,18 @@
     text-decoration: none;
 }
 
-
-
+/* paginator */
+.bt-paginator {
+    border: 1px solid #fb5607;
+    border-radius: 4px;
+    padding: 10px 10px;
+    color: #fb5607;
+    margin: 10px;
+}
+.bt-paginator:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #fb5607;
+}
 
 
