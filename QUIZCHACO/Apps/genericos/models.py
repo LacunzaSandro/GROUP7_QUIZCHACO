@@ -77,8 +77,10 @@ class QuizUsuario(models.Model):
     def update_score(self):
         puntaje_actualizado = self.intentos.filter(correcta=True).aggregate(
             models.Sum('puntaje_obtenido'))['puntaje_obtenido__sum']
-        self.puntaje_total = puntaje_actualizado
-        self.save()
+        # fix de error arrojado cuando erramos la primera respuesta. Evitamos que no se guarde None
+        if not puntaje_actualizado == None:
+            self.puntaje_total = puntaje_actualizado
+            self.save()
 
     def get_incomplete_question(self):
         preguntas_sin_responder = PreguntasRespondidas.objects.filter(
