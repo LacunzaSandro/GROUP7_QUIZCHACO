@@ -3,9 +3,12 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.http.response import Http404
 from django.shortcuts import redirect, render
 from Apps.genericos.models import QuizUsuario
-
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+
+
+@login_required
 def playQuiz(request):
     QuizUser, created = QuizUsuario.objects.get_or_create(usuario=request.user)
 

@@ -44,3 +44,8 @@ def Register(request):
         'titulo': titulo,
     }
     return render(request, 'auth/register.html', context)
+
+
+def Logout(request):
+    logout(request)
+    return redirect('/')
