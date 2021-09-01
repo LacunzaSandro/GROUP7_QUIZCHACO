@@ -17,26 +17,26 @@
 
 <div class="container justify-content-center align-items-center">
     <div class=" d-inline-flex justify-content-center align-items-center">
-        <div class="jumbotron my-4" style="min-height: 300px; min-width: 800px;">
+        <div class="jumbotron my-4" style="min-height: 300px; width: 800px; background-color: #FFD95C;">
             <div id="question">
                 <div hidden="true">
-                    <h3>{{pregunta.texto}}</h3>
+                    <h3 style="font-family: 'Gloria Hallelujah'; font-weight: bold;">{{pregunta.texto}}</h3>
                     <form class="form" action="" method="post">
                         {% csrf_token %}
                         <input type="hidden" name="pregunta_pk" value="{{pregunta.pk}}">
                         {% for opciones in pregunta.opciones.all %}
                         <div class="form-check mx-4">
                             <input type="radio" class="form-check-input" name="respuesta_pk" value="{{opciones.pk}}"
-                                id="choice-{{forloop.counter}}">
+                                id="choice-{{forloop.counter}}" style="margin-top: 30px;">
 
-                            <label for="choice-{{forloop.counter}}" class="form-check-label">
+                            <label for="choice-{{forloop.counter}}" class="form-check-label" style="font-family: 'Gloria Hallelujah'; font-weight: bold; font-size: 130%; margin-top: 20px;">
                                 {{opciones.texto}}
                             </label>
                         </div>
                         {% endfor %}
                         <div class="row">
                             <div class="col text-center">
-                                <button type="submit" class="btn btn-success btn-default">Enviar</button>
+                                <button type="submit" class="btn btn-success" style="width: 250px; font-family: 'Gloria Hallelujah'; font-weight: bold; background-color: #FB5607; border-color: #FB5607; margin-top: 50px; font-size: 120%;">Validar mi respuesta</button>
                             </div>
                         </div>
                         <!-- <button type="submit" class="btn btn-success justify-content-center">Enviar</button> -->
@@ -49,19 +49,19 @@
 
         <div class="span4">
             <div class="roulette_container">
-                <div class="roulette ml-3" style="display:none;">
-                    <img src="{% static 'img/historia.png' %}" />
-                    <img src="{% static 'img/ciencia_y_educacion.png' %}" />
-                    <img src="{% static 'img/cultura_y_arte.png' %}" />
-                    <img src="{% static 'img/deportes.png' %}" />
-                    <img src="{% static 'img/economia.png' %}" />
-                    <img src="{% static 'img/entretenimiento.png' %}" />
-                    <img src="{% static 'img/geografia.png' %}" />
+                <div class="roulette ml-3" style="display:none; margin-top: 20px;">
+                    <img src="{% static 'img/historia.png' %}"/>
+                    <img src="{% static 'img/ciencia_y_educacion.png' %}"/>
+                    <img src="{% static 'img/cultura_y_arte.png' %}"/>
+                    <img src="{% static 'img/deportes.png' %}"/>
+                    <img src="{% static 'img/economia.png' %}"/>
+                    <img src="{% static 'img/entretenimiento.png' %}"/>
+                    <img src="{% static 'img/geografia.png' %}"/>
                 </div>
             </div>
             <div class="btn_container">
                 <p>
-                    <button class="btn btn-large btn-primary start ml-5 mt-5"> START </button>
+                    <button class="btn start" style="margin-left: 80px; margin-top: 20px; font-family: 'Gloria Hallelujah'; font-weight: bold; font-size: 150%; color: #FFFFFF; background-color: #3BCEAC; width: 200px; border-color: #3BCEAC">¡Gira!</button>
                     <!-- <button class="stop btn-large btn btn-warning"> STOP </button> -->
                 </p>
             </div>
