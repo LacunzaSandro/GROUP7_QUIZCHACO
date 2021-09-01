@@ -46,3 +46,10 @@ def playQuiz(request):
         }
 
     return render(request, 'play/play.html', context)
+
+
+@login_required
+def reset(request):
+    QuizUser, created = QuizUsuario.objects.get_or_create(usuario=request.user)
+    QuizUser.reset_game()
+    return redirect('play:playQuiz')

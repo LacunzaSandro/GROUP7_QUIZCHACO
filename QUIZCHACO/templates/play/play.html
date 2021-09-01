@@ -8,8 +8,16 @@
     <div class="jumbotron my-4" style="font-family: 'Gloria Hallelujah'; text-align: center; background-color: #FFDE70">
         <h1 style="font-weight: bold; color: #FB5607; font-size: 300%;">¡Felicidades!</h1>
         <p style="font-weight: bold; font-size: 130%;">¡Has raspondido todas las preguntas existentes!</p>
-        <a href="{% url 'ranking:ranking' %}"><button class="btn" style="font-weight: bold; margin-right: 20px; border-color: #259379; border-width: 5px; background-color: #3BCEAC; font-size: 120%;">Ver el ranking</button></a>
-        <a href="#"><button class="btn" style="font-weight: bold; border-color: #0EAD69; border-width: 5px; background-color: #2FEE9C; font-size: 120%;">Jugar otra vez</button></a>
+        <a href="{% url 'ranking:ranking' %}">
+            <button class="btn"
+                style="font-weight: bold; margin-right: 20px; border-color: #259379; border-width: 5px; background-color: #3BCEAC; font-size: 120%;">Ver
+                el ranking</button>
+        </a>
+        <a href="{% url 'play:reset' %}">
+            <button class="btn"
+                style="font-weight: bold; border-color: hsl(39, 85%, 37%); border-width: 5px; background-color: #eecb2f; font-size: 120%;">Jugar
+                otra vez</button>
+        </a>
     </div>
 </div>
 
@@ -17,9 +25,9 @@
 <input type="hidden" id="categoria" name="categoria" value="{{ pregunta.categoria_id }}">
 
 
-<div class="container justify-content-center align-items-center">
+<div class="container justify-content-center align-items-center block-central">
     <div class=" d-inline-flex justify-content-center align-items-center">
-        <div class="jumbotron my-4" style="min-height: 300px; width: 800px; background-color: #FFD95C;">
+        <div class="jumbotron my-4" style="min-height: 500px; width: 800px; background-color: #FFD95C;">
             <div id="question">
                 <div hidden="true">
                     <h3 style="font-family: 'Gloria Hallelujah'; font-weight: bold;">{{pregunta.texto}}</h3>

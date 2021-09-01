@@ -87,6 +87,10 @@ class QuizUsuario(models.Model):
             quizUser=self, respuesta_id__isnull=True)
         return preguntas_sin_responder
 
+    # delete current user's game
+    def reset_game(self):
+        self.delete()
+
 
 class PreguntasRespondidas(models.Model):
     quizUser = models.ForeignKey(
