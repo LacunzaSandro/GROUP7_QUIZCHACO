@@ -183,5 +183,19 @@
     color: white;
     background-color: #fb5607;
 }
-
-
+.block-central {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.text-justify {
+    text-align: justify;
+  }
+.text-shared {
+    color: gray;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+}

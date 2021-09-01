@@ -8,3 +8,10 @@ def Home(request):
     }
 
     return render(request, 'index.html', context)
+
+
+def About(request):
+    context = {
+        'titulo': 'Quiz Chaco - Acerca de'
+    }
+    return render(request, 'about.html', context)

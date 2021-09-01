@@ -9,7 +9,7 @@ def ranking(request):
     # definimos que solo se mostraran los diez primeros de la lista
     contact_list = QuizUsuario.objects.order_by('-puntaje_total')[:10]
     # mostramos 10 usuarios por paginación
-    paginator = Paginator(contact_list, 1)
+    paginator = Paginator(contact_list, 15)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     context = {

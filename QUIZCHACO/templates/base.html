@@ -32,7 +32,9 @@
 	<script src="{% static 'js/roulette.js' %}"></script>
 	<script src="{% static 'js/demo.js' %}"></script>
 	<!-- scripts sharethis -->
-	<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=612fc350ee93c8001206f344&product=inline-share-buttons" async="async"></script>
+	<script type="text/javascript"
+		src="https://platform-api.sharethis.com/js/sharethis.js#property=612fc350ee93c8001206f344&product=inline-share-buttons"
+		async="async"></script>
 </head>
 
 <body>
@@ -50,7 +52,7 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="">Acerca de</a>
+							<a class="nav-link" href="{% url 'about' %}">Acerca de</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="{% url 'ranking:ranking' %}">Ranking</a>
