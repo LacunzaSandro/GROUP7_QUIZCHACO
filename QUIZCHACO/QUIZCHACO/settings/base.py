@@ -38,8 +38,6 @@ AUTH_USER_MODEL = 'usuarios.Usuario'
 SECRET_KEY = 'n-ng0gm^di061v-n*q=o+tq3vn#&jo&^d#dn^gdk*wgc3yu4^_'
 
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
