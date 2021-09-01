@@ -1,4 +1,14 @@
 $(function () {
+	var rad = document.form.respuesta_pk;
+	for (var i = 0; i < rad.length; i++) {
+		rad[i].onclick = function () {
+			var btn = document.getElementById("btn-send").getElementsByTagName('*');
+			for (var i = 0; i < btn.length; i++) {
+				btn[i].hidden = false;
+			}
+		};
+	}
+
 
 	$('.roulette').find('img').hover(function () {
 		console.log($(this).height());
@@ -16,7 +26,7 @@ $(function () {
 			$('#stopImageNumber').spinner('disable');
 			$('.start').attr('hidden', 'true');
 			//$('.stop').removeAttr('disabled');
-			var nodes = document.getElementById("question").getElementsByTagName('*');
+			var nodes = document.getElementById("question").getElementsByTagName('respuesta_pk');
 			for (var i = 0; i < nodes.length; i++) {
 				nodes[i].hidden = true;
 			}
@@ -31,7 +41,6 @@ $(function () {
 			$('#stopImageNumber').spinner('enable');
 			//$('.start').removeAttr('disabled');
 			//$('.stop').attr('disabled', 'true');
-			$('.start').attr('disabled', 'true');
 			var nodes = document.getElementById("question").getElementsByTagName('*');
 			for (var i = 0; i < nodes.length; i++) {
 				nodes[i].hidden = false;

@@ -3,7 +3,9 @@
 {% block contenido %}
 
 {% if pregunta is None %}
+<script type="text/javascript">
 
+</script>
 <div class="container block-central">
     <div class="jumbotron my-4" style="font-family: 'Gloria Hallelujah'; text-align: center; background-color: #FFDE70">
         <h1 style="font-weight: bold; color: #FB5607; font-size: 300%;">¡Felicidades!</h1>
@@ -28,10 +30,13 @@
 <div class="container justify-content-center align-items-center block-central">
     <div class=" d-inline-flex justify-content-center align-items-center">
         <div class="jumbotron my-4" style="min-height: 500px; width: 800px; background-color: #FFD95C;">
-            <div id="question">
-                <div hidden="true">
-                    <h3 style="font-family: 'Gloria Hallelujah'; font-weight: bold;">{{pregunta.texto}}</h3>
-                    <form class="form" action="" method="post">
+
+
+
+            <form class="form" name="form" action="" method="post">
+                <div id="question">
+                    <div hidden>
+                        <h3 style="font-family: 'Gloria Hallelujah'; font-weight: bold;">{{pregunta.texto}}</h3>
                         {% csrf_token %}
                         <input type="hidden" name="pregunta_pk" value="{{pregunta.pk}}">
                         {% for opciones in pregunta.opciones.all %}
@@ -45,18 +50,23 @@
                             </label>
                         </div>
                         {% endfor %}
-                        <div class="row">
-                            <div class="col text-center">
-                                <button type="submit" class="btn btn-success"
-                                    style="width: 250px; font-family: 'Gloria Hallelujah'; font-weight: bold; background-color: #FB5607; border-color: #FB5607; margin-top: 50px; font-size: 120%;">Validar
-                                    mi respuesta</button>
-                            </div>
-                        </div>
-                        <!-- <button type="submit" class="btn btn-success justify-content-center">Enviar</button> -->
-                    </form>
-                </div>
+                    </div>
 
-            </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center" id="btn-send">
+                        <div hidden>
+                            <button
+                                style=" width: 250px; font-family: 'Gloria Hallelujah'; font-weight: bold; background-color: #FB5607; border-color: #FB5607; margin-top: 50px; font-size: 120%;">Validar
+                                mi respuesta</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button type="submit" class="btn btn-success justify-content-center">Enviar</button> -->
+            </form>
+
+
+
 
         </div>
 
